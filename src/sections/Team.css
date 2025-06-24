@@ -1,0 +1,216 @@
+.team-section {
+  position: relative;
+  padding: 5rem 1.5rem;
+  background: #fff;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.animated-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff6f00;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.underline {
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ff6f00;
+  margin: 0.5rem auto;
+  animation: underlineGrow 2s ease-in-out infinite alternate;
+}
+
+@keyframes underlineGrow {
+  0% {
+    transform: scaleX(0.3);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.team-description {
+  font-size: 1.3rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.marquee-mask {
+  height: 550px; /* enough space to show all cards while scrolling */
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.marquee-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marquee-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+.scrolling-card {
+  background: #fafafa;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  opacity: 0.9;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem auto;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #ff6f00;
+  margin-bottom: 0.75rem;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.member-role {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+/* Floating Circles */
+.floating-circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.08;
+  animation: float 10s ease-in-out infinite;
+  filter: blur(40px);
+}
+
+.orange {
+  background: rgba(255, 111, 0, 0.2);
+  width: 200px;
+  height: 200px;
+  top: 15%;
+  left: 10%;
+}
+
+.glow {
+  background: rgba(0, 188, 212, 0.2);
+  width: 150px;
+  height: 150px;
+  bottom: 15%;
+  right: 10%;
+}
+.dual-marquee-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 2rem auto;
+  height: 500px;
+}
+
+.marquee-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.scrolling-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #ff6f00;
+  margin-bottom: 0.5rem;
+}
+
+.member-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.member-role {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-25px) translateX(15px);
+  }
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .animated-heading {
+    font-size: 2rem;
+  }
+
+  .team-description {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .scrolling-card {
+    width: 90%;
+    padding: 1.2rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .member-name {
+    font-size: 1.3rem;
+  }
+
+  .member-role {
+    font-size: 1rem;
+  }
+
+  .marquee-mask {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,139 @@
+.contact-section {
+  background: #fff4e6; /* light orange */
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 1.5rem;
+  z-index: 1;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.animated-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff6f00;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.animated-heading .underline {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff6f00;
+  margin: 0.5rem auto 0;
+  animation: underlineGrow 2s ease-in-out infinite alternate;
+}
+
+@keyframes underlineGrow {
+  0% {
+    transform: scaleX(0.3);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.contact-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #ccc;
+  outline: none;
+  resize: none;
+  background: #fdfdfd;
+  transition: border 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff6f00;
+}
+
+.contact-form button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background: #ff6f00;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #e55d00;
+}
+
+/* Floating UI Circles */
+.floating-circles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 111, 0, 0.12);
+  filter: blur(40px);
+  animation: float 8s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, -20px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .animated-heading {
+    font-size: 2rem;
+  }
+}

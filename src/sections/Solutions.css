@@ -1,0 +1,54 @@
+.solutions-section {
+  background-color: #ffffff;
+  color: #000;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.floating-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+
+.orange-text {
+  color: #ff6600;
+}
+
+.solution-row {
+  z-index: 2;
+}
+
+.icon-wrapper {
+  flex-shrink: 0;
+  background: #fff;
+  border: 2px solid #ff6600;
+  border-radius: 50%;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.text-wrapper {
+  max-width: 700px;
+  transition: transform 0.4s ease;
+}
+
+.text-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
